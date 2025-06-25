@@ -26,8 +26,16 @@
 <main class="catalogo">
     <h1>Catálogo de Productos</h1>
 
+    <!-- Filtros -->
+    <div class="filtros">
+        <button data-categoria="todos" class="activo">Todos</button>
+        <button data-categoria="tartas">Tartas</button>
+        <button data-categoria="cupcakes">Cupcakes</button>
+        <button data-categoria="galletas">Galletas</button>
+    </div>
+
     <!-- Tartas -->
-    <section class="catálogo" id="tartas">
+    <section class="categoria" id="tartas">
         <h2>Tartas</h2>
         <div class="productos">
             <article class="producto">
@@ -98,5 +106,30 @@
     <p>&copy; 2025 Dulce Tentación. Todos los derechos reservados.</p>
     <p><a href="#">Política de privacidad</a> | <a href="#">Aviso legal</a> | <a href="#">Política de cookies</a></p>
 </footer>
+
+<script>
+    const botones = document.querySelectorAll('.filtros button');
+    const secciones = document.querySelectorAll('.categoria');
+
+    botones.forEach(boton => {
+        boton.addEventListener('click', () => {
+        // Quitar clase activa a todos
+        botones.forEach(b => b.classList.remove('activo'));
+        // Añadir clase activa al clicado
+        boton.classList.add('activo');
+
+        const categoria = boton.getAttribute('data-categoria');
+
+        secciones.forEach(seccion => {
+            if (categoria === 'todos' || seccion.id === categoria) {
+            seccion.style.display = 'block';
+            } else {
+            seccion.style.display = 'none';
+            }
+        });
+        });
+    });
+</script>
+
 </body>
 </html>

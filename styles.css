@@ -182,6 +182,32 @@ footer.legal a:hover {
     border-bottom: 2px dashed #AED9E0;
 }
 
+/* FILTROS CATALOGO */
+.filtros {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.filtros button {
+    background-color: #FFDAC1;
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filtros button:hover {
+    background-color: #FFB7B2;
+}
+
+.filtros button.activo {
+    background-color: #FFB7B2;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
 .productos {
     display: flex;
     flex-wrap: wrap;
