@@ -25,6 +25,7 @@ header {
     color: #5E412F;
 }
 
+
 /* HERO */
 .hero {
     text-align: center;
@@ -63,6 +64,25 @@ header {
     transform: scale(1.05);
 }
 
+.boton-productos {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.8rem 1.6rem;
+    background-color: #b48b57;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.boton-productos:hover {
+    background-color: #8a683d;
+    transform: scale(1.05);
+}
+
+
 /* SECCIÓN NOSOTROS */
 .nosotros {
     padding: 3rem 2rem;
@@ -84,44 +104,39 @@ header {
 }
 
 /* CONTACTO */
-.contact-section {
-  background-color: #FFF5BA;
-  padding: 4rem 1rem;
-  text-align: center;
-  color: #333;
+.contacto {
+    padding: 3rem 2rem;
+    background-color: #AED9E0;
+    text-align: center;
 }
 
-.contact-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+.contacto h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
-.contact-section p {
-  font-size: 1rem;
-  margin-bottom: 2rem;
+.contacto p {
+    margin: 0.5rem 0;
 }
 
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  align-items: center;
+.redes a {
+    color: #5E412F;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
 }
 
-.contact-info a,
-.contact-info p {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  font-size: 1.1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: color 0.3s ease;
+.redes a:hover {
+    color: #FFE4EC;
 }
 
-.contact-info a:hover {
-  color: #cc0000; /* o tu color acento */
+.mapa {
+    margin-top: 2rem;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* LEGAL */
@@ -224,6 +239,7 @@ footer.legal a:hover {
 .producto h3 {
     margin-top: 0.5rem;
     font-size: 1.2rem;
+    text-align: center;
 }
 
 .producto p {
@@ -247,6 +263,16 @@ footer.legal a:hover {
     border-bottom: 1px solid #EEE;
 }
 
+.producto td.alergeno {
+    text-align: left;
+    width: 70%;
+}
+
+.producto td.check {
+    text-align: right;
+    width: 30%;
+}
+
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
@@ -266,12 +292,12 @@ footer.legal a:hover {
 }
 
 @media (min-width: 600px) {
-  .contact-info {
-    flex-direction: row;
-    justify-content: center;
-  }
+    .contact-info {
+        flex-direction: row;
+        justify-content: center;
+    }
 
-  .contact-info > div {
-    margin: 0 1rem;
-  }
+    .contact-info > div {
+        margin: 0 1rem;
+    }
 }
