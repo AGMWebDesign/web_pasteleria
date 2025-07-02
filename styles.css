@@ -25,25 +25,6 @@ header {
     color: #5E412F;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-    margin: 0;
-    padding: 0;
-}
-
-nav a {
-    text-decoration: none;
-    color: #5E412F;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: #AED9E0;
-}
-
 /* HERO */
 .hero {
     text-align: center;
@@ -103,39 +84,44 @@ nav a:hover {
 }
 
 /* CONTACTO */
-.contacto {
-    padding: 3rem 2rem;
-    background-color: #AED9E0;
-    text-align: center;
+.contact-section {
+  background-color: #FFF5BA;
+  padding: 4rem 1rem;
+  text-align: center;
+  color: #333;
 }
 
-.contacto h2 {
-    font-family: 'Pacifico', cursive;
-    font-size: 2rem;
-    margin-bottom: 1rem;
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
-.contacto p {
-    margin: 0.5rem 0;
+.contact-section p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
 }
 
-.redes a {
-    color: #5E412F;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 0 0.5rem;
-    transition: color 0.3s ease;
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
 }
 
-.redes a:hover {
-    color: #FFE4EC;
+.contact-info a,
+.contact-info p {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease;
 }
 
-.mapa {
-    margin-top: 2rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+.contact-info a:hover {
+  color: #cc0000; /* o tu color acento */
 }
 
 /* LEGAL */
@@ -180,6 +166,7 @@ footer.legal a:hover {
     font-size: 2rem;
     color: #5E412F;
     border-bottom: 2px dashed #AED9E0;
+    text-align: center;
 }
 
 /* FILTROS CATALOGO */
@@ -213,6 +200,7 @@ footer.legal a:hover {
     flex-wrap: wrap;
     gap: 2rem;
     margin-top: 1rem;
+    justify-content: center;
 }
 
 .producto {
@@ -262,13 +250,28 @@ footer.legal a:hover {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        gap: 1rem;
-        align-items: center;
+    .producto {
+        width: 100%;
+        max-width: 320px;
     }
 
-    .hero-images {
-        flex-direction: column;
+    .catalogo {
+        padding: 1rem;
     }
+
+    .filtros button {
+        margin: 0.3rem 0.3rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+@media (min-width: 600px) {
+  .contact-info {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .contact-info > div {
+    margin: 0 1rem;
+  }
 }
